@@ -1,4 +1,4 @@
-local React = require(script.Parent.Parent:FindFirstChild("React")) :: any
+local React = require(script.Parent.Parent.Parent:FindFirstChild("React")) :: any
 
 local Components = {}
 
