@@ -18,19 +18,15 @@ function Components.Attachment(props: {
     WorldCFrame: (CFrame)? | Binding<CFrame>,
     WorldOrientation: (Vector3)? | Binding<Vector3>,
     WorldPosition: (Vector3)? | Binding<Vector3>,
-    WorldRotation: (Vector3)? | Binding<Vector3>,
     WorldSecondaryAxis: (Vector3)? | Binding<Vector3>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Attachment", props)
 end
@@ -38,15 +34,12 @@ end
 function Components.Folder(props: {
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Folder", props)
 end
@@ -66,7 +59,6 @@ function Components.CanvasGroup(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -84,9 +76,6 @@ function Components.CanvasGroup(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -97,15 +86,12 @@ function Components.CanvasGroup(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("CanvasGroup", props)
 end
@@ -124,7 +110,6 @@ function Components.Frame(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -142,9 +127,6 @@ function Components.Frame(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -155,15 +137,12 @@ function Components.Frame(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Frame", props)
 end
@@ -177,7 +156,6 @@ function Components.ImageButton(props: {
     ImageRectOffset: (Vector2)? | Binding<Vector2>,
     ImageRectSize: (Vector2)? | Binding<Vector2>,
     ImageTransparency: (number)? | Binding<number>,
-    IsLoaded: (boolean)? | Binding<boolean>,
     PressedImage: (string)? | Binding<string>,
     PressedImageContent: (Content)? | Binding<Content>,
     ResampleMode: (Enum.ResamplerMode)? | Binding<Enum.ResamplerMode>,
@@ -203,7 +181,6 @@ function Components.ImageButton(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -221,9 +198,6 @@ function Components.ImageButton(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -234,36 +208,28 @@ function Components.ImageButton(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ImageButton", props)
 end
 
 function Components.TextButton(props: {
-    ContentText: (string | number)? | Binding<string | number>,
     Font: (Enum.Font)? | Binding<Enum.Font>,
     FontFace: (Font)? | Binding<Font>,
     FontSize: (Enum.FontSize)? | Binding<Enum.FontSize>,
     LineHeight: (number)? | Binding<number>,
-    LocalizedText: (string | number)? | Binding<string | number>,
     MaxVisibleGraphemes: (number)? | Binding<number>,
     OpenTypeFeatures: (string | number)? | Binding<string | number>,
-    OpenTypeFeaturesError: (string | number)? | Binding<string | number>,
     RichText: (boolean)? | Binding<boolean>,
     Text: (string | number)? | Binding<string | number>,
-    TextBounds: (Vector2)? | Binding<Vector2>,
     TextColor: (BrickColor)? | Binding<BrickColor>,
     TextColor3: (Color3)? | Binding<Color3>,
     TextDirection: (Enum.TextDirection)? | Binding<Enum.TextDirection>,
-    TextFits: (boolean)? | Binding<boolean>,
     TextScaled: (boolean)? | Binding<boolean>,
     TextSize: (number)? | Binding<number>,
     TextStrokeColor3: (Color3)? | Binding<Color3>,
@@ -292,7 +258,6 @@ function Components.TextButton(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -310,9 +275,6 @@ function Components.TextButton(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -323,15 +285,12 @@ function Components.TextButton(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("TextButton", props)
 end
@@ -343,7 +302,6 @@ function Components.ImageLabel(props: {
     ImageRectOffset: (Vector2)? | Binding<Vector2>,
     ImageRectSize: (Vector2)? | Binding<Vector2>,
     ImageTransparency: (number)? | Binding<number>,
-    IsLoaded: (boolean)? | Binding<boolean>,
     ResampleMode: (Enum.ResamplerMode)? | Binding<Enum.ResamplerMode>,
     ScaleType: (Enum.ScaleType)? | Binding<Enum.ScaleType>,
     SliceCenter: (Rect)? | Binding<Rect>,
@@ -361,7 +319,6 @@ function Components.ImageLabel(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -379,9 +336,6 @@ function Components.ImageLabel(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -392,36 +346,28 @@ function Components.ImageLabel(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ImageLabel", props)
 end
 
 function Components.TextLabel(props: {
-    ContentText: (string | number)? | Binding<string | number>,
     Font: (Enum.Font)? | Binding<Enum.Font>,
     FontFace: (Font)? | Binding<Font>,
     FontSize: (Enum.FontSize)? | Binding<Enum.FontSize>,
     LineHeight: (number)? | Binding<number>,
-    LocalizedText: (string | number)? | Binding<string | number>,
     MaxVisibleGraphemes: (number)? | Binding<number>,
     OpenTypeFeatures: (string | number)? | Binding<string | number>,
-    OpenTypeFeaturesError: (string | number)? | Binding<string | number>,
     RichText: (boolean)? | Binding<boolean>,
     Text: (string | number)? | Binding<string | number>,
-    TextBounds: (Vector2)? | Binding<Vector2>,
     TextColor: (BrickColor)? | Binding<BrickColor>,
     TextColor3: (Color3)? | Binding<Color3>,
     TextDirection: (Enum.TextDirection)? | Binding<Enum.TextDirection>,
-    TextFits: (boolean)? | Binding<boolean>,
     TextScaled: (boolean)? | Binding<boolean>,
     TextSize: (number)? | Binding<number>,
     TextStrokeColor3: (Color3)? | Binding<Color3>,
@@ -444,7 +390,6 @@ function Components.TextLabel(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -462,9 +407,6 @@ function Components.TextLabel(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -475,22 +417,17 @@ function Components.TextLabel(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("TextLabel", props)
 end
 
 function Components.ScrollingFrame(props: {
-    AbsoluteCanvasSize: (Vector2)? | Binding<Vector2>,
-    AbsoluteWindowSize: (Vector2)? | Binding<Vector2>,
     AutomaticCanvasSize: (Enum.AutomaticSize)? | Binding<Enum.AutomaticSize>,
     BottomImage: (string)? | Binding<string>,
     BottomImageContent: (Content)? | Binding<Content>,
@@ -521,7 +458,6 @@ function Components.ScrollingFrame(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -539,9 +475,6 @@ function Components.ScrollingFrame(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -552,22 +485,18 @@ function Components.ScrollingFrame(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ScrollingFrame", props)
 end
 
 function Components.TextBox(props: {
     ClearTextOnFocus: (boolean)? | Binding<boolean>,
-    ContentText: (string | number)? | Binding<string | number>,
     CursorPosition: (number)? | Binding<number>,
     Font: (Enum.Font)? | Binding<Enum.Font>,
     FontFace: (Font)? | Binding<Font>,
@@ -576,19 +505,16 @@ function Components.TextBox(props: {
     MaxVisibleGraphemes: (number)? | Binding<number>,
     MultiLine: (boolean)? | Binding<boolean>,
     OpenTypeFeatures: (string | number)? | Binding<string | number>,
-    OpenTypeFeaturesError: (string | number)? | Binding<string | number>,
     PlaceholderColor3: (Color3)? | Binding<Color3>,
     PlaceholderText: (string | number)? | Binding<string | number>,
     RichText: (boolean)? | Binding<boolean>,
     SelectionStart: (number)? | Binding<number>,
     ShowNativeInput: (boolean)? | Binding<boolean>,
     Text: (string | number)? | Binding<string | number>,
-    TextBounds: (Vector2)? | Binding<Vector2>,
     TextColor: (BrickColor)? | Binding<BrickColor>,
     TextColor3: (Color3)? | Binding<Color3>,
     TextDirection: (Enum.TextDirection)? | Binding<Enum.TextDirection>,
     TextEditable: (boolean)? | Binding<boolean>,
-    TextFits: (boolean)? | Binding<boolean>,
     TextScaled: (boolean)? | Binding<boolean>,
     TextSize: (number)? | Binding<number>,
     TextStrokeColor3: (Color3)? | Binding<Color3>,
@@ -611,7 +537,6 @@ function Components.TextBox(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -629,9 +554,6 @@ function Components.TextBox(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -642,29 +564,23 @@ function Components.TextBox(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("TextBox", props)
 end
 
 function Components.VideoFrame(props: {
-    IsLoaded: (boolean)? | Binding<boolean>,
     Looped: (boolean)? | Binding<boolean>,
     MaximumResolution: (Enum.VideoSampleSize)? | Binding<Enum.VideoSampleSize>,
     Playing: (boolean)? | Binding<boolean>,
-    Resolution: (Vector2)? | Binding<Vector2>,
     RollOffMaxDistance: (number)? | Binding<number>,
     RollOffMinDistance: (number)? | Binding<number>,
     RollOffMode: (Enum.RollOffMode)? | Binding<Enum.RollOffMode>,
-    TimeLength: (number)? | Binding<number>,
     TimePosition: (number)? | Binding<number>,
     Video: (string)? | Binding<string>,
     VideoContent: (Content)? | Binding<Content>,
@@ -681,7 +597,6 @@ function Components.VideoFrame(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -699,9 +614,6 @@ function Components.VideoFrame(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -712,15 +624,12 @@ function Components.VideoFrame(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("VideoFrame", props)
 end
@@ -744,7 +653,6 @@ function Components.ViewportFrame(props: {
     BorderSizePixel: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
     Draggable: (boolean)? | Binding<boolean>,
-    GuiState: (Enum.GuiState)? | Binding<Enum.GuiState>,
     InputSink: (Enum.InputSink)? | Binding<Enum.InputSink>,
     Interactable: (boolean)? | Binding<boolean>,
     LayoutOrder: (number)? | Binding<number>,
@@ -762,9 +670,6 @@ function Components.ViewportFrame(props: {
     Transparency: (number)? | Binding<number>,
     Visible: (boolean)? | Binding<boolean>,
     ZIndex: (number)? | Binding<number>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -775,15 +680,12 @@ function Components.ViewportFrame(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ViewportFrame", props)
 end
@@ -794,7 +696,6 @@ function Components.BillboardGui(props: {
     AlwaysOnTop: (boolean)? | Binding<boolean>,
     Brightness: (number)? | Binding<number>,
     ClipsDescendants: (boolean)? | Binding<boolean>,
-    CurrentDistance: (number)? | Binding<number>,
     DistanceLowerLimit: (number)? | Binding<number>,
     DistanceStep: (number)? | Binding<number>,
     DistanceUpperLimit: (number)? | Binding<number>,
@@ -810,9 +711,6 @@ function Components.BillboardGui(props: {
     Enabled: (boolean)? | Binding<boolean>,
     ResetOnSpawn: (boolean)? | Binding<boolean>,
     ZIndexBehavior: (Enum.ZIndexBehavior)? | Binding<Enum.ZIndexBehavior>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -823,15 +721,12 @@ function Components.BillboardGui(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("BillboardGui", props)
 end
@@ -845,9 +740,6 @@ function Components.ScreenGui(props: {
     Enabled: (boolean)? | Binding<boolean>,
     ResetOnSpawn: (boolean)? | Binding<boolean>,
     ZIndexBehavior: (Enum.ZIndexBehavior)? | Binding<Enum.ZIndexBehavior>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -858,15 +750,12 @@ function Components.ScreenGui(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ScreenGui", props)
 end
@@ -875,16 +764,12 @@ function Components.AdGui(props: {
     AdShape: (Enum.AdShape)? | Binding<Enum.AdShape>,
     EnableVideoAds: (boolean)? | Binding<boolean>,
     FallbackImage: (string)? | Binding<string>,
-    Status: (Enum.AdUnitStatus)? | Binding<Enum.AdUnitStatus>,
     Active: (boolean)? | Binding<boolean>,
     Adornee: (Instance)? | Binding<Instance>,
     Face: (Enum.NormalId)? | Binding<Enum.NormalId>,
     Enabled: (boolean)? | Binding<boolean>,
     ResetOnSpawn: (boolean)? | Binding<boolean>,
     ZIndexBehavior: (Enum.ZIndexBehavior)? | Binding<Enum.ZIndexBehavior>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -895,15 +780,12 @@ function Components.AdGui(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("AdGui", props)
 end
@@ -925,9 +807,6 @@ function Components.SurfaceGui(props: {
     Enabled: (boolean)? | Binding<boolean>,
     ResetOnSpawn: (boolean)? | Binding<boolean>,
     ZIndexBehavior: (Enum.ZIndexBehavior)? | Binding<Enum.ZIndexBehavior>,
-    AbsolutePosition: (Vector2)? | Binding<Vector2>,
-    AbsoluteRotation: (number)? | Binding<number>,
-    AbsoluteSize: (Vector2)? | Binding<Vector2>,
     AutoLocalize: (boolean)? | Binding<boolean>,
     Localize: (boolean)? | Binding<boolean>,
     RootLocalizationTable: (LocalizationTable)? | Binding<LocalizationTable>,
@@ -938,15 +817,12 @@ function Components.SurfaceGui(props: {
     SelectionGroup: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("SurfaceGui", props)
 end
@@ -963,15 +839,12 @@ function Components.SelectionBox(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("SelectionBox", props)
 end
@@ -991,15 +864,12 @@ function Components.BoxHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("BoxHandleAdornment", props)
 end
@@ -1021,15 +891,12 @@ function Components.ConeHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ConeHandleAdornment", props)
 end
@@ -1052,15 +919,12 @@ function Components.CylinderHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("CylinderHandleAdornment", props)
 end
@@ -1080,15 +944,12 @@ function Components.ImageHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ImageHandleAdornment", props)
 end
@@ -1108,15 +969,12 @@ function Components.LineHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("LineHandleAdornment", props)
 end
@@ -1136,15 +994,12 @@ function Components.SphereHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("SphereHandleAdornment", props)
 end
@@ -1164,15 +1019,12 @@ function Components.WireframeHandleAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("WireframeHandleAdornment", props)
 end
@@ -1185,15 +1037,12 @@ function Components.ParabolaAdornment(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ParabolaAdornment", props)
 end
@@ -1209,15 +1058,12 @@ function Components.SelectionSphere(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("SelectionSphere", props)
 end
@@ -1231,15 +1077,12 @@ function Components.ArcHandles(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ArcHandles", props)
 end
@@ -1254,15 +1097,12 @@ function Components.Handles(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Handles", props)
 end
@@ -1276,15 +1116,12 @@ function Components.SurfaceSelection(props: {
     Visible: (boolean)? | Binding<boolean>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("SurfaceSelection", props)
 end
@@ -1297,15 +1134,12 @@ function Components.Path2D(props: {
     ZIndex: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Path2D", props)
 end
@@ -1320,15 +1154,12 @@ function Components.Highlight(props: {
     OutlineTransparency: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Highlight", props)
 end
@@ -1339,10 +1170,7 @@ function Components.Part(props: {
     formFactor: (Enum.FormFactor)? | Binding<Enum.FormFactor>,
     Anchored: (boolean)? | Binding<boolean>,
     AssemblyAngularVelocity: (Vector3)? | Binding<Vector3>,
-    AssemblyCenterOfMass: (Vector3)? | Binding<Vector3>,
     AssemblyLinearVelocity: (Vector3)? | Binding<Vector3>,
-    AssemblyMass: (number)? | Binding<number>,
-    AssemblyRootPart: (BasePart)? | Binding<BasePart>,
     AudioCanCollide: (boolean)? | Binding<boolean>,
     BackParamA: (number)? | Binding<number>,
     BackParamB: (number)? | Binding<number>,
@@ -1358,16 +1186,12 @@ function Components.Part(props: {
     CanQuery: (boolean)? | Binding<boolean>,
     CanTouch: (boolean)? | Binding<boolean>,
     CastShadow: (boolean)? | Binding<boolean>,
-    CenterOfMass: (Vector3)? | Binding<Vector3>,
     CollisionGroup: (string | number)? | Binding<string | number>,
     CollisionGroupId: (number)? | Binding<number>,
     Color: (Color3)? | Binding<Color3>,
-    CurrentPhysicalProperties: (PhysicalProperties)? | Binding<PhysicalProperties>,
     CustomPhysicalProperties: (PhysicalProperties)? | Binding<PhysicalProperties>,
     Elasticity: (number)? | Binding<number>,
     EnableFluidForces: (boolean)? | Binding<boolean>,
-    ExtentsCFrame: (CFrame)? | Binding<CFrame>,
-    ExtentsSize: (Vector3)? | Binding<Vector3>,
     Friction: (number)? | Binding<number>,
     FrontParamA: (number)? | Binding<number>,
     FrontParamB: (number)? | Binding<number>,
@@ -1379,17 +1203,13 @@ function Components.Part(props: {
     LeftSurfaceInput: (Enum.InputType)? | Binding<Enum.InputType>,
     LocalTransparencyModifier: (number)? | Binding<number>,
     Locked: (boolean)? | Binding<boolean>,
-    Mass: (number)? | Binding<number>,
     Massless: (boolean)? | Binding<boolean>,
     Material: (Enum.Material)? | Binding<Enum.Material>,
     MaterialVariant: (string | number)? | Binding<string | number>,
     Orientation: (Vector3)? | Binding<Vector3>,
     PivotOffset: (CFrame)? | Binding<CFrame>,
     Position: (Vector3)? | Binding<Vector3>,
-    ReceiveAge: (number)? | Binding<number>,
     Reflectance: (number)? | Binding<number>,
-    ResizeIncrement: (number)? | Binding<number>,
-    ResizeableFaces: (Faces)? | Binding<Faces>,
     RightParamA: (number)? | Binding<number>,
     RightParamB: (number)? | Binding<number>,
     RightSurface: (Enum.SurfaceType)? | Binding<Enum.SurfaceType>,
@@ -1398,7 +1218,6 @@ function Components.Part(props: {
     RotVelocity: (Vector3)? | Binding<Vector3>,
     Rotation: (Vector3)? | Binding<Vector3>,
     Size: (Vector3)? | Binding<Vector3>,
-    SpecificGravity: (number)? | Binding<number>,
     TopParamA: (number)? | Binding<number>,
     TopParamB: (number)? | Binding<number>,
     TopSurface: (Enum.SurfaceType)? | Binding<Enum.SurfaceType>,
@@ -1408,15 +1227,12 @@ function Components.Part(props: {
     brickColor: (BrickColor)? | Binding<BrickColor>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Part", props)
 end
@@ -1433,13 +1249,9 @@ function Components.MeshPart(props: {
     TextureID: (string)? | Binding<string>,
     CollisionFidelity: (Enum.CollisionFidelity)? | Binding<Enum.CollisionFidelity>,
     FluidFidelity: (Enum.FluidFidelity)? | Binding<Enum.FluidFidelity>,
-    MeshSize: (Vector3)? | Binding<Vector3>,
     Anchored: (boolean)? | Binding<boolean>,
     AssemblyAngularVelocity: (Vector3)? | Binding<Vector3>,
-    AssemblyCenterOfMass: (Vector3)? | Binding<Vector3>,
     AssemblyLinearVelocity: (Vector3)? | Binding<Vector3>,
-    AssemblyMass: (number)? | Binding<number>,
-    AssemblyRootPart: (BasePart)? | Binding<BasePart>,
     AudioCanCollide: (boolean)? | Binding<boolean>,
     BackParamA: (number)? | Binding<number>,
     BackParamB: (number)? | Binding<number>,
@@ -1455,16 +1267,12 @@ function Components.MeshPart(props: {
     CanQuery: (boolean)? | Binding<boolean>,
     CanTouch: (boolean)? | Binding<boolean>,
     CastShadow: (boolean)? | Binding<boolean>,
-    CenterOfMass: (Vector3)? | Binding<Vector3>,
     CollisionGroup: (string | number)? | Binding<string | number>,
     CollisionGroupId: (number)? | Binding<number>,
     Color: (Color3)? | Binding<Color3>,
-    CurrentPhysicalProperties: (PhysicalProperties)? | Binding<PhysicalProperties>,
     CustomPhysicalProperties: (PhysicalProperties)? | Binding<PhysicalProperties>,
     Elasticity: (number)? | Binding<number>,
     EnableFluidForces: (boolean)? | Binding<boolean>,
-    ExtentsCFrame: (CFrame)? | Binding<CFrame>,
-    ExtentsSize: (Vector3)? | Binding<Vector3>,
     Friction: (number)? | Binding<number>,
     FrontParamA: (number)? | Binding<number>,
     FrontParamB: (number)? | Binding<number>,
@@ -1476,17 +1284,13 @@ function Components.MeshPart(props: {
     LeftSurfaceInput: (Enum.InputType)? | Binding<Enum.InputType>,
     LocalTransparencyModifier: (number)? | Binding<number>,
     Locked: (boolean)? | Binding<boolean>,
-    Mass: (number)? | Binding<number>,
     Massless: (boolean)? | Binding<boolean>,
     Material: (Enum.Material)? | Binding<Enum.Material>,
     MaterialVariant: (string | number)? | Binding<string | number>,
     Orientation: (Vector3)? | Binding<Vector3>,
     PivotOffset: (CFrame)? | Binding<CFrame>,
     Position: (Vector3)? | Binding<Vector3>,
-    ReceiveAge: (number)? | Binding<number>,
     Reflectance: (number)? | Binding<number>,
-    ResizeIncrement: (number)? | Binding<number>,
-    ResizeableFaces: (Faces)? | Binding<Faces>,
     RightParamA: (number)? | Binding<number>,
     RightParamB: (number)? | Binding<number>,
     RightSurface: (Enum.SurfaceType)? | Binding<Enum.SurfaceType>,
@@ -1495,7 +1299,6 @@ function Components.MeshPart(props: {
     RotVelocity: (Vector3)? | Binding<Vector3>,
     Rotation: (Vector3)? | Binding<Vector3>,
     Size: (Vector3)? | Binding<Vector3>,
-    SpecificGravity: (number)? | Binding<number>,
     TopParamA: (number)? | Binding<number>,
     TopParamB: (number)? | Binding<number>,
     TopSurface: (Enum.SurfaceType)? | Binding<Enum.SurfaceType>,
@@ -1505,15 +1308,12 @@ function Components.MeshPart(props: {
     brickColor: (BrickColor)? | Binding<BrickColor>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("MeshPart", props)
 end
@@ -1530,21 +1330,16 @@ function Components.Camera(props: {
     HeadLocked: (boolean)? | Binding<boolean>,
     HeadScale: (number)? | Binding<number>,
     MaxAxisFieldOfView: (number)? | Binding<number>,
-    NearPlaneZ: (number)? | Binding<number>,
     VRTiltAndRollEnabled: (boolean)? | Binding<boolean>,
-    ViewportSize: (Vector2)? | Binding<Vector2>,
     focus: (CFrame)? | Binding<CFrame>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Camera", props)
 end
@@ -1556,15 +1351,12 @@ function Components.Model(props: {
     WorldPivot: (CFrame)? | Binding<CFrame>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("Model", props)
 end
@@ -1576,15 +1368,12 @@ function Components.WorldModel(props: {
     WorldPivot: (CFrame)? | Binding<CFrame>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("WorldModel", props)
 end
@@ -1630,15 +1419,12 @@ function Components.ParticleEmitter(props: {
     ZOffset: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("ParticleEmitter", props)
 end
@@ -1649,15 +1435,12 @@ function Components.UIAspectRatioConstraint(props: {
     DominantAxis: (Enum.DominantAxis)? | Binding<Enum.DominantAxis>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIAspectRatioConstraint", props)
 end
@@ -1667,15 +1450,12 @@ function Components.UISizeConstraint(props: {
     MinSize: (Vector2)? | Binding<Vector2>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UISizeConstraint", props)
 end
@@ -1685,15 +1465,12 @@ function Components.UITextSizeConstraint(props: {
     MinTextSize: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UITextSizeConstraint", props)
 end
@@ -1706,15 +1483,12 @@ function Components.UICorner(props: {
     TopRightRadius: (UDim)? | Binding<UDim>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UICorner", props)
 end
@@ -1744,15 +1518,12 @@ function Components.UIDragDetector(props: {
     UIDragSpeedAxisMapping: (Enum.UIDragSpeedAxisMapping)? | Binding<Enum.UIDragSpeedAxisMapping>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIDragDetector", props)
 end
@@ -1764,15 +1535,12 @@ function Components.UIFlexItem(props: {
     ShrinkRatio: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIFlexItem", props)
 end
@@ -1785,42 +1553,33 @@ function Components.UIGradient(props: {
     Transparency: (NumberSequence)? | Binding<NumberSequence>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIGradient", props)
 end
 
 function Components.UIGridLayout(props: {
-    AbsoluteCellCount: (Vector2)? | Binding<Vector2>,
-    AbsoluteCellSize: (Vector2)? | Binding<Vector2>,
     CellPadding: (UDim2)? | Binding<UDim2>,
     CellSize: (UDim2)? | Binding<UDim2>,
     FillDirectionMaxCells: (number)? | Binding<number>,
     StartCorner: (Enum.StartCorner)? | Binding<Enum.StartCorner>,
-    AbsoluteContentSize: (Vector2)? | Binding<Vector2>,
     FillDirection: (Enum.FillDirection)? | Binding<Enum.FillDirection>,
     HorizontalAlignment: (Enum.HorizontalAlignment)? | Binding<Enum.HorizontalAlignment>,
     SortOrder: (Enum.SortOrder)? | Binding<Enum.SortOrder>,
     VerticalAlignment: (Enum.VerticalAlignment)? | Binding<Enum.VerticalAlignment>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIGridLayout", props)
 end
@@ -1831,22 +1590,18 @@ function Components.UIListLayout(props: {
     Padding: (UDim)? | Binding<UDim>,
     VerticalFlex: (Enum.UIFlexAlignment)? | Binding<Enum.UIFlexAlignment>,
     Wraps: (boolean)? | Binding<boolean>,
-    AbsoluteContentSize: (Vector2)? | Binding<Vector2>,
     FillDirection: (Enum.FillDirection)? | Binding<Enum.FillDirection>,
     HorizontalAlignment: (Enum.HorizontalAlignment)? | Binding<Enum.HorizontalAlignment>,
     SortOrder: (Enum.SortOrder)? | Binding<Enum.SortOrder>,
     VerticalAlignment: (Enum.VerticalAlignment)? | Binding<Enum.VerticalAlignment>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIListLayout", props)
 end
@@ -1854,7 +1609,6 @@ end
 function Components.UIPageLayout(props: {
     Animated: (boolean)? | Binding<boolean>,
     Circular: (boolean)? | Binding<boolean>,
-    CurrentPage: (GuiObject)? | Binding<GuiObject>,
     EasingDirection: (Enum.EasingDirection)? | Binding<Enum.EasingDirection>,
     EasingStyle: (Enum.EasingStyle)? | Binding<Enum.EasingStyle>,
     GamepadInputEnabled: (boolean)? | Binding<boolean>,
@@ -1862,22 +1616,18 @@ function Components.UIPageLayout(props: {
     ScrollWheelInputEnabled: (boolean)? | Binding<boolean>,
     TouchInputEnabled: (boolean)? | Binding<boolean>,
     TweenTime: (number)? | Binding<number>,
-    AbsoluteContentSize: (Vector2)? | Binding<Vector2>,
     FillDirection: (Enum.FillDirection)? | Binding<Enum.FillDirection>,
     HorizontalAlignment: (Enum.HorizontalAlignment)? | Binding<Enum.HorizontalAlignment>,
     SortOrder: (Enum.SortOrder)? | Binding<Enum.SortOrder>,
     VerticalAlignment: (Enum.VerticalAlignment)? | Binding<Enum.VerticalAlignment>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIPageLayout", props)
 end
@@ -1887,22 +1637,18 @@ function Components.UITableLayout(props: {
     FillEmptySpaceRows: (boolean)? | Binding<boolean>,
     MajorAxis: (Enum.TableMajorAxis)? | Binding<Enum.TableMajorAxis>,
     Padding: (UDim2)? | Binding<UDim2>,
-    AbsoluteContentSize: (Vector2)? | Binding<Vector2>,
     FillDirection: (Enum.FillDirection)? | Binding<Enum.FillDirection>,
     HorizontalAlignment: (Enum.HorizontalAlignment)? | Binding<Enum.HorizontalAlignment>,
     SortOrder: (Enum.SortOrder)? | Binding<Enum.SortOrder>,
     VerticalAlignment: (Enum.VerticalAlignment)? | Binding<Enum.VerticalAlignment>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UITableLayout", props)
 end
@@ -1914,15 +1660,12 @@ function Components.UIPadding(props: {
     PaddingTop: (UDim)? | Binding<UDim>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIPadding", props)
 end
@@ -1931,15 +1674,12 @@ function Components.UIScale(props: {
     Scale: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIScale", props)
 end
@@ -1957,15 +1697,12 @@ function Components.UIStroke(props: {
     ZIndex: (number)? | Binding<number>,
     Archivable: (boolean)? | Binding<boolean>,
     Capabilities: (any)? | Binding<any>,
-    DataCost: (number)? | Binding<number>,
     Name: (string | number)? | Binding<string | number>,
     Parent: (Instance)? | Binding<Instance>,
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    ClassName: (string | number)? | Binding<string | number>,
-    className: (string | number)? | Binding<string | number>,
-    [any]: (...any) -> ()
+    [{ [string]: any }]: (...any) -> ()
 })
     return e("UIStroke", props)
 end

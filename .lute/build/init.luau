@@ -224,7 +224,7 @@ for _, class: IClass in extended_classes do
 		local memberTags: IMemberTags = member.Tags or {}
 		local memberSecurity: ISecurity = member.Security
 
-		if table.find(memberTags, "NotScriptable") then
+		if table.find(memberTags, "NotScriptable") or table.find(memberTags, "ReadOnly")  then
 			continue
 		end
 
@@ -238,7 +238,7 @@ for _, class: IClass in extended_classes do
 			)
 		end
 	end
-	writer:append_line(`[any]: (...any) -> ()`)
+	writer:append_line(`[\{ [string]: any }]: (...any) -> ()`)
 
 	writer:dedent()
 
