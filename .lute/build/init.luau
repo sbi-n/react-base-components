@@ -233,12 +233,14 @@ for _, class: IClass in extended_classes do
 		end
 
 		if memberType == "Property" then
+			local propertyType = getPropertyType(valueType)
+
 			writer:append_line(
-				`{name}: ({getPropertyType(valueType)})? | {BINDING_NAME}<{getPropertyType(valueType)}>,`
+				`{name}: ({propertyType})? | {BINDING_NAME}<{propertyType}>,`
 			)
 		end
 	end
-	writer:append_line(`[any]: (...any) -> ()`)
+	writer:append_line(`[unknown]: (...any) -> ()`)
 
 	writer:dedent()
 

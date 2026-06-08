@@ -26,7 +26,7 @@ function Components.Attachment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Attachment", props)
 end
@@ -39,7 +39,7 @@ function Components.Folder(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Folder", props)
 end
@@ -91,7 +91,7 @@ function Components.CanvasGroup(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("CanvasGroup", props)
 end
@@ -142,7 +142,7 @@ function Components.Frame(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Frame", props)
 end
@@ -213,7 +213,7 @@ function Components.ImageButton(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ImageButton", props)
 end
@@ -290,7 +290,7 @@ function Components.TextButton(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("TextButton", props)
 end
@@ -351,7 +351,7 @@ function Components.ImageLabel(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ImageLabel", props)
 end
@@ -422,7 +422,7 @@ function Components.TextLabel(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("TextLabel", props)
 end
@@ -490,7 +490,7 @@ function Components.ScrollingFrame(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ScrollingFrame", props)
 end
@@ -569,7 +569,7 @@ function Components.TextBox(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("TextBox", props)
 end
@@ -629,7 +629,7 @@ function Components.VideoFrame(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("VideoFrame", props)
 end
@@ -685,7 +685,7 @@ function Components.ViewportFrame(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ViewportFrame", props)
 end
@@ -726,7 +726,7 @@ function Components.BillboardGui(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("BillboardGui", props)
 end
@@ -755,7 +755,7 @@ function Components.ScreenGui(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ScreenGui", props)
 end
@@ -785,7 +785,7 @@ function Components.AdGui(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("AdGui", props)
 end
@@ -822,7 +822,7 @@ function Components.SurfaceGui(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("SurfaceGui", props)
 end
@@ -844,7 +844,7 @@ function Components.SelectionBox(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("SelectionBox", props)
 end
@@ -869,7 +869,7 @@ function Components.BoxHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("BoxHandleAdornment", props)
 end
@@ -896,7 +896,7 @@ function Components.ConeHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ConeHandleAdornment", props)
 end
@@ -924,7 +924,7 @@ function Components.CylinderHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("CylinderHandleAdornment", props)
 end
@@ -949,7 +949,7 @@ function Components.ImageHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ImageHandleAdornment", props)
 end
@@ -974,7 +974,7 @@ function Components.LineHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("LineHandleAdornment", props)
 end
@@ -999,7 +999,7 @@ function Components.SphereHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("SphereHandleAdornment", props)
 end
@@ -1024,7 +1024,7 @@ function Components.WireframeHandleAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("WireframeHandleAdornment", props)
 end
@@ -1042,7 +1042,7 @@ function Components.ParabolaAdornment(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ParabolaAdornment", props)
 end
@@ -1063,7 +1063,7 @@ function Components.SelectionSphere(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("SelectionSphere", props)
 end
@@ -1082,7 +1082,7 @@ function Components.ArcHandles(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ArcHandles", props)
 end
@@ -1102,7 +1102,7 @@ function Components.Handles(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Handles", props)
 end
@@ -1121,7 +1121,7 @@ function Components.SurfaceSelection(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("SurfaceSelection", props)
 end
@@ -1139,7 +1139,7 @@ function Components.Path2D(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Path2D", props)
 end
@@ -1159,7 +1159,7 @@ function Components.Highlight(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Highlight", props)
 end
@@ -1232,7 +1232,7 @@ function Components.Part(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Part", props)
 end
@@ -1313,7 +1313,7 @@ function Components.MeshPart(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("MeshPart", props)
 end
@@ -1339,7 +1339,7 @@ function Components.Camera(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Camera", props)
 end
@@ -1356,7 +1356,7 @@ function Components.Model(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("Model", props)
 end
@@ -1373,7 +1373,7 @@ function Components.WorldModel(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("WorldModel", props)
 end
@@ -1424,7 +1424,7 @@ function Components.ParticleEmitter(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("ParticleEmitter", props)
 end
@@ -1440,7 +1440,7 @@ function Components.UIAspectRatioConstraint(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIAspectRatioConstraint", props)
 end
@@ -1455,7 +1455,7 @@ function Components.UISizeConstraint(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UISizeConstraint", props)
 end
@@ -1470,7 +1470,7 @@ function Components.UITextSizeConstraint(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UITextSizeConstraint", props)
 end
@@ -1488,7 +1488,7 @@ function Components.UICorner(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UICorner", props)
 end
@@ -1523,7 +1523,7 @@ function Components.UIDragDetector(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIDragDetector", props)
 end
@@ -1540,7 +1540,7 @@ function Components.UIFlexItem(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIFlexItem", props)
 end
@@ -1558,7 +1558,7 @@ function Components.UIGradient(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIGradient", props)
 end
@@ -1579,7 +1579,7 @@ function Components.UIGridLayout(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIGridLayout", props)
 end
@@ -1601,7 +1601,7 @@ function Components.UIListLayout(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIListLayout", props)
 end
@@ -1627,7 +1627,7 @@ function Components.UIPageLayout(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIPageLayout", props)
 end
@@ -1648,7 +1648,7 @@ function Components.UITableLayout(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UITableLayout", props)
 end
@@ -1665,7 +1665,7 @@ function Components.UIPadding(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIPadding", props)
 end
@@ -1679,7 +1679,7 @@ function Components.UIScale(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIScale", props)
 end
@@ -1702,7 +1702,7 @@ function Components.UIStroke(props: {
     RobloxLocked: (boolean)? | Binding<boolean>,
     Sandboxed: (boolean)? | Binding<boolean>,
     archivable: (boolean)? | Binding<boolean>,
-    [{ [string]: any }]: (...any) -> ()
+    [unknown]: (...any) -> ()
 })
     return e("UIStroke", props)
 end
