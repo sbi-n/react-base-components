@@ -8,10 +8,12 @@ local TableExt = require("@std/tableext")
 
 local Writer = require("@self/writer")
 
+local REACT_NAME = "React"
 local COMPONENTS_NAME = "Components"
+local BINDING_NAME = "Binding"
 local PROPS_NAME = "props"
+local CREATE_ELEMENT_NAME = "e"
 local DUMP_URL = "https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/refs/heads/roblox/API-Dump.json"
-local IGNORED_TAGS = { "NotCreatable", "ReadOnly", "Service" }
 
 type ICategory = "Enum" | "Class" | "Primitive" | "DataType" | "Group"
 type IMemberType = "Property" | "Event" | any
@@ -49,16 +51,16 @@ type IClass = any
 type IClasses = { IClass }
 
 local aliases = {
-	["int64"] = "number?",
-	["int"] = "number?",
-	["float"] = "number?",
-	["double"] = "number?",
-	["bool"] = "boolean?",
-	["ContentId"] = "string?",
-	["string"] = "string? | number?",
-	["OptionalCoordinateFrame"] = "CFrame?",
-	["BinaryString"] = "string?",
-	["ProtectedString"] = "string?",
+	["int64"] = "number",
+	["int"] = "number",
+	["float"] = "number",
+	["double"] = "number",
+	["bool"] = "boolean",
+	["ContentId"] = "string",
+	["string"] = "string | number",
+	["OptionalCoordinateFrame"] = "CFrame",
+	["BinaryString"] = "string",
+	["ProtectedString"] = "string",
 	["SecurityCapabilities"] = "any",
 }
 
@@ -67,15 +69,15 @@ local function getPropertyType(valueType: IValueType)
 	local name = valueType.Name
 
 	if category == "Enum" then
-		return `Enum.{name}?`
+		return `Enum.{name}`
 	elseif category == "Class" then
-		return `{name}?`
+		return `{name}`
 	elseif category == "Primitive" then
-		return aliases[name] or `{name}?`
+		return aliases[name] or `{name}`
 	elseif category == "DataType" then
-		return aliases[name] or `{name}?`
+		return aliases[name] or `{name}`
 	elseif category == "Group" then
-		return `{name}?`
+		return `{name}`
 	else
 		return "any"
 	end
@@ -136,7 +138,11 @@ end
 
 local writer = Writer.new()
 
-writer:append_line(`local React = require(script.Parent.Parent:FindFirstChild("React")) :: any`)
+writer:append_line(`local {REACT_NAME} = require(script.Parent:FindFirstChild("react")) :: any`)
+writer:append("\n")
+writer:append_line(`local {CREATE_ELEMENT_NAME} = {REACT_NAME}.createElement`)
+writer:append("\n")
+writer:append_line(`type Binding<T> = {BINDING_NAME}.Binding<T>`)
 writer:append("\n")
 writer:append_line(`local {COMPONENTS_NAME} = \{}`)
 writer:append("\n")
@@ -167,7 +173,7 @@ for _, class: IClass in extended_classes do
 		end
 
 		if memberType == "Property" then
-			writer:append_line(`{name}: {getPropertyType(valueType)},`)
+			writer:append_line(`{name}: ({getPropertyType(valueType)})? | {BINDING_NAME}<{getPropertyType(valueType)}>,`)
 		end
 	end
 	writer:append_line(`[any]: (...any) -> ()`)
