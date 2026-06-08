@@ -64,6 +64,61 @@ local aliases = {
 	["SecurityCapabilities"] = "any",
 }
 
+local desired_classes = {
+	"CanvasGroup",
+	"Frame",
+	"ImageButton",
+	"TextButton",
+	"ImageLabel",
+	"TextLabel",
+	"ScrollingFrame",
+	"TextBox",
+	"VideoFrame",
+	"ViewportFrame",
+	"BillboardGui",
+	"ScreenGui",
+	"AdGui",
+	"SurfaceGui",
+	"SelectionBox",
+	"BoxHandleAdornment",
+	"ConeHandleAdornment",
+	"CylinderHandleAdornment",
+	"ImageHandleAdornment",
+	"LineHandleAdornment",
+	"SphereHandleAdornment",
+	"WireframeHandleAdornment",
+	"ParabolaAdornment",
+	"SelectionSphere",
+	"ArcHandles",
+	"Handles",
+	"SurfaceSelection",
+	"Path2D",
+	"UIAspectRatioConstraint",
+	"UISizeConstraint",
+	"UITextSizeConstraint",
+	"UICorner",
+	"UIDragDetector",
+	"UIFlexItem",
+	"UIGradient",
+	"UIListLayout",
+	"UIGridLayout",
+	"UIPageLayout",
+	"UITableLayout",
+	"UIPadding",
+	"UIScale",
+	"UIStroke",
+
+	"WorldModel",
+	"Camera",
+	"Part",
+	"Model",
+	"MeshPart",
+	"Highlight",
+	"Folder",
+	"Attachment",
+	"ParticleEmitter",
+}
+
 local function getPropertyType(valueType: IValueType)
 	local category = valueType.Category
 	local name = valueType.Name
@@ -138,17 +193,22 @@ end
 
 local writer = Writer.new()
 
-writer:append_line(`local {REACT_NAME} = require(script.Parent:FindFirstChild("react")) :: any`)
+writer:append_line(`local {REACT_NAME} = require(script.Parent:FindFirstChild("react"))`)
 writer:append("\n")
 writer:append_line(`local {CREATE_ELEMENT_NAME} = {REACT_NAME}.createElement`)
 writer:append("\n")
-writer:append_line(`type Binding<T> = {BINDING_NAME}.Binding<T>`)
+writer:append_line(`type {BINDING_NAME}<T> = {REACT_NAME}.Binding<T>`)
 writer:append("\n")
 writer:append_line(`local {COMPONENTS_NAME} = \{}`)
 writer:append("\n")
 
 for _, class: IClass in extended_classes do
 	local classTags: IClassTags = class.Tags or {}
+	local className: string = class.Name
+
+	if not table.find(desired_classes, className) then
+		continue
+	end
 
 	if table.find(classTags, "NotCreatable") or table.find(classTags, "Service") then
 		continue
@@ -173,7 +233,9 @@ for _, class: IClass in extended_classes do
 		end
 
 		if memberType == "Property" then
-			writer:append_line(`{name}: ({getPropertyType(valueType)})? | {BINDING_NAME}<{getPropertyType(valueType)}>,`)
+			writer:append_line(
+				`{name}: ({getPropertyType(valueType)})? | {BINDING_NAME}<{getPropertyType(valueType)}>,`
+			)
 		end
 	end
 	writer:append_line(`[any]: (...any) -> ()`)
@@ -183,7 +245,7 @@ for _, class: IClass in extended_classes do
 	writer:append_line("})")
 	writer:indent()
 
-	writer:append_line(`return React.createElement("{class.Name}", {PROPS_NAME})`)
+	writer:append_line(`return {CREATE_ELEMENT_NAME}("{class.Name}", {PROPS_NAME})`)
 	writer:dedent()
 
 	writer:append_line("end")
