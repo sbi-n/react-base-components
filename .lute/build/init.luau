@@ -238,7 +238,7 @@ for _, class: IClass in extended_classes do
 			)
 		end
 	end
-	writer:append_line(`[\{ [string]: any }]: (...any) -> ()`)
+	writer:append_line(`[any]: (...any) -> ()`)
 
 	writer:dedent()
 
