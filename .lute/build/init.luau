@@ -236,7 +236,7 @@ for _, class: IClass in extended_classes do
 			local propertyType = getPropertyType(valueType)
 
 			writer:append_line(
-				`{name}: ({propertyType})? | {BINDING_NAME}<{propertyType}>,`
+				`{name}: ({propertyType} | {BINDING_NAME}<{propertyType}>)?,`
 			)
 		end
 	end
