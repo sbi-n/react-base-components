@@ -10,6 +10,7 @@ local Writer = require("@self/writer")
 local REACT_NAME = "React"
 local COMPONENTS_NAME = "Components"
 local BINDING_NAME = "Binding"
+local CHANGE_HANDLER_NAME = "ChangeHandler"
 local PROPS_NAME = "props"
 local CREATE_ELEMENT_NAME = "e"
 local DUMP_URL = "https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/refs/heads/roblox/API-Dump.json"
@@ -222,6 +223,8 @@ writer:append_line(`local {CREATE_ELEMENT_NAME} = {REACT_NAME}.createElement`)
 writer:append("\n")
 writer:append_line(`type {BINDING_NAME}<T> = {REACT_NAME}.Binding<T>`)
 writer:append("\n")
+writer:append_line(`type {CHANGE_HANDLER_NAME}<T> = (rbx: T) -> ()`)
+writer:append("\n")
 writer:append_line("local function resolveHostProps(props: any): any")
 writer:indent()
 writer:append_line("local hostProps = table.clone(props)")
@@ -298,7 +301,7 @@ for _, class: IClass in extended_classes do
 			continue
 		end
 
-		writer:append_line(`{member.Name}: ((rbx: {className}) -> ())?,`)
+		writer:append_line(`{member.Name}: ({CHANGE_HANDLER_NAME}<{className}>)?,`)
 	end
 	writer:dedent()
 	writer:append_line("}?,")
