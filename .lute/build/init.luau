@@ -1,7 +1,6 @@
 --!strict
 
 local Fs = require("@std/fs")
-local Path = require("@std/path")
 local Net = require("@std/net")
 local Json = require("@std/json")
 local TableExt = require("@std/tableext")
@@ -16,7 +15,6 @@ local CREATE_ELEMENT_NAME = "e"
 local DUMP_URL = "https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/refs/heads/roblox/API-Dump.json"
 
 type ICategory = "Enum" | "Class" | "Primitive" | "DataType" | "Group"
-type IMemberType = "Property" | "Event" | any
 type IClassTag = any
 type IClassTags = { IClassTag }
 type IMemberTag = any
@@ -35,17 +33,30 @@ type IValueType = {
 	Category: ICategory,
 	Name: string,
 }
-type IMember = {
+type IParameter = {
 	Name: string,
-	Capabilities: ICapabilities,
-	Category: ICategory,
-	MemberType: IMemberType,
-	Security: ISecurity,
-	Serialization: ISerialization,
-	Tags: IMemberTags,
-	ThreadSafety: IThreadSafety,
-	ValueType: IValueType,
+	Type: IValueType,
 }
+type IMember =
+	{
+		MemberType: "Property",
+		Name: string,
+		Capabilities: ICapabilities,
+		Category: ICategory,
+		Security: ISecurity,
+		Serialization: ISerialization,
+		Tags: IMemberTags,
+		ThreadSafety: IThreadSafety,
+		ValueType: IValueType,
+	}
+	| {
+		MemberType: "Event",
+		Name: string,
+		Capabilities: ICapabilities,
+		Security: string,
+		ThreadSafety: IThreadSafety,
+		Parameters: { IParameter },
+	}
 type IMembers = { IMember }
 type IClass = any
 type IClasses = { IClass }
@@ -62,6 +73,10 @@ local aliases = {
 	["BinaryString"] = "string",
 	["ProtectedString"] = "string",
 	["SecurityCapabilities"] = "any",
+	["Array"] = "{ any }",
+	["Dictionary"] = "{ [any]: any }",
+	["Tuple"] = "{ any }",
+	["Variant"] = "any",
 }
 
 local desired_classes = {
@@ -132,20 +147,28 @@ local function getPropertyType(valueType: IValueType)
 	elseif category == "DataType" then
 		return aliases[name] or `{name}`
 	elseif category == "Group" then
-		return `{name}`
+		return aliases[name] or `{name}`
 	else
 		return "any"
 	end
 end
 
-local function tableFind<K, V>(tbl: { [K]: V }, predicate: (V) -> boolean): V?
-	for _, value in tbl do
-		if predicate(value) == true then
-			return value
-		end
+local function getEventHandlerType(className: string, parameters: { IParameter }): string
+	local typedParameters = { `rbx: {className}` }
+
+	for _, parameter in parameters do
+		local parameterType = if parameter.Type.Name == "string"
+			then "string"
+			else getPropertyType(parameter.Type)
+
+		table.insert(typedParameters, `{parameter.Name}: {parameterType}`)
 	end
 
-	return
+	return `({table.concat(typedParameters, ", ")}) -> ()`
+end
+
+local function isRestrictedSecurity(security: string): boolean
+	return security == "RobloxScriptSecurity" or security == "RobloxSecurity"
 end
 
 local function tableDeepClone(data: any): any
@@ -175,14 +198,14 @@ for _, subclass: IClass in classes do
 	local superclass: IClass = class
 	while superclass do
 		for _, member in superclass.Members do
-			if not tableFind(members, function(needle)
+			if not TableExt.find(members, function(needle)
 				return needle.Name == member.Name
 			end) then
 				table.insert(members, member)
 			end
 		end
 
-		superclass = tableFind(classes, function(needle)
+		superclass = TableExt.find(classes, function(needle)
 			return needle.Name == superclass.Superclass
 		end)
 	end
@@ -198,6 +221,38 @@ writer:append("\n")
 writer:append_line(`local {CREATE_ELEMENT_NAME} = {REACT_NAME}.createElement`)
 writer:append("\n")
 writer:append_line(`type {BINDING_NAME}<T> = {REACT_NAME}.Binding<T>`)
+writer:append("\n")
+writer:append_line("local function resolveHostProps(props: any): any")
+writer:indent()
+writer:append_line("local hostProps = table.clone(props)")
+writer:append("\n")
+writer:append_line("local events = hostProps.Event")
+writer:append_line("hostProps.Event = nil")
+writer:append_line("if events then")
+writer:indent()
+writer:append_line("for name, callback in events do")
+writer:indent()
+writer:append_line(`hostProps[{REACT_NAME}.Event[name]] = callback`)
+writer:dedent()
+writer:append_line("end")
+writer:dedent()
+writer:append_line("end")
+writer:append("\n")
+writer:append_line("local changes = hostProps.Change")
+writer:append_line("hostProps.Change = nil")
+writer:append_line("if changes then")
+writer:indent()
+writer:append_line("for name, callback in changes do")
+writer:indent()
+writer:append_line(`hostProps[{REACT_NAME}.Change[name]] = callback`)
+writer:dedent()
+writer:append_line("end")
+writer:dedent()
+writer:append_line("end")
+writer:append("\n")
+writer:append_line("return hostProps")
+writer:dedent()
+writer:append_line("end")
 writer:append("\n")
 writer:append_line(`local {COMPONENTS_NAME} = \{}`)
 writer:append("\n")
@@ -217,28 +272,55 @@ for _, class: IClass in extended_classes do
 	writer:append_line(`function {COMPONENTS_NAME}.{class.Name}({PROPS_NAME}: \{`)
 	writer:indent()
 
+	writer:append_line("Event: {")
+	writer:indent()
 	for _, member: IMember in class.Members do
-		local name: string = member.Name
-		local valueType: IValueType = member.ValueType
-		local memberType: IMemberType = member.MemberType
+		if member.MemberType ~= "Event" or isRestrictedSecurity(member.Security) then
+			continue
+		end
+
+		writer:append_line(
+			`{member.Name}: ({getEventHandlerType(className, member.Parameters)})?,`
+		)
+	end
+	writer:dedent()
+	writer:append_line("}?,")
+
+	writer:append_line("Change: {")
+	writer:indent()
+	for _, member: IMember in class.Members do
+		if member.MemberType ~= "Property" then
+			continue
+		end
+
 		local memberTags: IMemberTags = member.Tags or {}
-		local memberSecurity: ISecurity = member.Security
-
-		if table.find(memberTags, "NotScriptable") or table.find(memberTags, "ReadOnly")  then
+		if table.find(memberTags, "NotScriptable") or isRestrictedSecurity(member.Security.Read) then
 			continue
 		end
 
-		if memberSecurity.Write == "RobloxScriptSecurity" or memberSecurity.Write == "RobloxSecurity" then
+		writer:append_line(`{member.Name}: ((rbx: {className}) -> ())?,`)
+	end
+	writer:dedent()
+	writer:append_line("}?,")
+
+	for _, member: IMember in class.Members do
+		if member.MemberType ~= "Property" then
 			continue
 		end
 
-		if memberType == "Property" then
-			local propertyType = getPropertyType(valueType)
-
-			writer:append_line(
-				`{name}: ({propertyType} | {BINDING_NAME}<{propertyType}>)?,`
-			)
+		local memberTags: IMemberTags = member.Tags or {}
+		if
+			table.find(memberTags, "NotScriptable")
+			or table.find(memberTags, "ReadOnly")
+			or isRestrictedSecurity(member.Security.Write)
+		then
+			continue
 		end
+
+		local propertyType = getPropertyType(member.ValueType)
+		writer:append_line(
+			`{member.Name}: ({propertyType} | {BINDING_NAME}<{propertyType}>)?,`
+		)
 	end
 	writer:append_line(`[unknown]: (...any) -> ()`)
 
@@ -247,7 +329,9 @@ for _, class: IClass in extended_classes do
 	writer:append_line("})")
 	writer:indent()
 
-	writer:append_line(`return {CREATE_ELEMENT_NAME}("{class.Name}", {PROPS_NAME})`)
+	writer:append_line(
+		`return {CREATE_ELEMENT_NAME}("{class.Name}", resolveHostProps({PROPS_NAME}))`
+	)
 	writer:dedent()
 
 	writer:append_line("end")
