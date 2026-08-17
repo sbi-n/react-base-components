@@ -10,6 +10,7 @@ local Writer = require("@self/writer")
 local REACT_NAME = "React"
 local COMPONENTS_NAME = "Components"
 local BINDING_NAME = "Binding"
+local BINDING_OR_VALUE_NAME = "BindingOrValue"
 local CHANGE_HANDLER_NAME = "ChangeHandler"
 local PROPS_NAME = "props"
 local CREATE_ELEMENT_NAME = "e"
@@ -222,7 +223,7 @@ writer:append("\n")
 writer:append_line(`local {CREATE_ELEMENT_NAME} = {REACT_NAME}.createElement`)
 writer:append("\n")
 writer:append_line(`type {BINDING_NAME}<T> = {REACT_NAME}.Binding<T>`)
-writer:append("\n")
+writer:append_line(`type {BINDING_OR_VALUE_NAME}<T> = T | {BINDING_NAME}<T>`)
 writer:append_line(`type {CHANGE_HANDLER_NAME}<T> = (rbx: T) -> ()`)
 writer:append("\n")
 writer:append_line("local function resolveHostProps(props: any): any")
@@ -322,7 +323,7 @@ for _, class: IClass in extended_classes do
 
 		local propertyType = getPropertyType(member.ValueType)
 		writer:append_line(
-			`{member.Name}: ({propertyType} | {BINDING_NAME}<{propertyType}>)?,`
+			`{member.Name}: ({BINDING_OR_VALUE_NAME}<{propertyType}>)?,`
 		)
 	end
 	writer:append_line(`[unknown]: (...any) -> ()`)
